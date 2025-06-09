@@ -1,0 +1,57 @@
+{
+    "name": "@filerune/fusion",
+    "version": "0.1.0",
+    "description": "A file splitting & merging solution",
+    "keywords": [
+        "filerune",
+        "rune",
+        "split",
+        "separate",
+        "check",
+        "merge",
+        "combine",
+        "fs",
+        "tool",
+        "util",
+        "file",
+        "files",
+        "buffer",
+        "buffers",
+        "blob",
+        "blobs",
+        "frontend",
+        "ts",
+        "typescript",
+        "js",
+        "javascript"
+    ],
+    "homepage": "https://github.com/filerune/javascript",
+    "bugs": "https://github.com/filerune/javascript/issues",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/filerune/javascript.git",
+        "directory": "packages/fusion"
+    },
+    "license": "MIT",
+    "author": "Alpheus Tang",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.js"
+        },
+        "./internal": {
+            "types": "./dist/internal.d.ts",
+            "import": "./dist/internal.mjs",
+            "require": "./dist/internal.js"
+        },
+        "./package.json": "./package.json"
+    },
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "files": ["dist"],
+    "dependencies": {
+        "ts-vista": "~0.2.2"
+    }
+}

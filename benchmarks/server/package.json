@@ -1,0 +1,13 @@
+{
+    "name": "bench-server",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "bench": "vitest bench --run",
+        "": ""
+    },
+    "dependencies": {
+        "@filerune/fusion-node": "workspace:~",
+        "vitest": "^3.2.2"
+    }
+}

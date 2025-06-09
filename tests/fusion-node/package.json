@@ -1,0 +1,14 @@
+{
+    "name": "test-fusion-node",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "test": "vitest run",
+        "": ""
+    },
+    "dependencies": {
+        "@filerune/fusion-node": "workspace:^",
+        "fdir": "^6.4.5",
+        "vitest": "^3.2.2"
+    }
+}
