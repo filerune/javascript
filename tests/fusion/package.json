@@ -9,6 +9,6 @@
     "dependencies": {
         "@filerune/fusion": "workspace:^",
         "fdir": "^6.4.5",
-        "vitest": "^3.2.2"
+        "vitest": "^3.2.3"
     }
 }
