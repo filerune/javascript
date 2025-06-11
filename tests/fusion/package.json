@@ -8,7 +8,7 @@
     },
     "dependencies": {
         "@filerune/fusion": "workspace:^",
-        "fdir": "^6.4.5",
+        "fdir": "^6.4.6",
         "vitest": "^3.2.3"
     }
 }
