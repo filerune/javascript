@@ -80,8 +80,8 @@ importers:
         specifier: workspace:^
         version: link:../../packages/fusion
       fdir:
-        specifier: ^6.4.5
-        version: 6.4.5(picomatch@4.0.2)
+        specifier: ^6.4.6
+        version: 6.4.6(picomatch@4.0.2)
       vitest:
         specifier: ^3.2.3
         version: 3.2.3(@types/node@20.19.0)(happy-dom@17.6.3)(yaml@2.8.0)
@@ -92,8 +92,8 @@ importers:
         specifier: workspace:^
         version: link:../../packages/fusion-node
       fdir:
-        specifier: ^6.4.5
-        version: 6.4.5(picomatch@4.0.2)
+        specifier: ^6.4.6
+        version: 6.4.6(picomatch@4.0.2)
       vitest:
         specifier: ^3.2.3
         version: 3.2.3(@types/node@20.19.0)(happy-dom@17.6.3)(yaml@2.8.0)
@@ -890,8 +890,8 @@ packages:
     resolution: {integrity: sha512-/kP8CAwxzLVEeFrMm4kMmy4CCDlpipyA7MYLVrdJIkV0fYF0UaigQHRsxHiuY/GEea+bh4KSv3TIlgr+2UL6bw==}
     engines: {node: '>=12.0.0'}
 
-  fdir@6.4.5:
-    resolution: {integrity: sha512-4BG7puHpVsIYxZUbiUE3RqGloLaSSwzYie5jvasC4LWuBWzZawynvYouhjbQKw2JuIGYdm0DzIxl8iVidKlUEw==}
+  fdir@6.4.6:
+    resolution: {integrity: sha512-hiFoqpyZcfNm1yc4u8oWCf9A2c4D3QjCrks3zmoVKVxpQRzmPNar1hUJcBG2RQHvEVGDN+Jm81ZheVLAQMK6+w==}
     peerDependencies:
       picomatch: ^3 || ^4
     peerDependenciesMeta:
@@ -1928,7 +1928,7 @@ snapshots:
 
   expect-type@1.2.1: {}
 
-  fdir@6.4.5(picomatch@4.0.2):
+  fdir@6.4.6(picomatch@4.0.2):
     optionalDependencies:
       picomatch: 4.0.2
 
@@ -2200,12 +2200,12 @@ snapshots:
 
   tinyglobby@0.2.13:
     dependencies:
-      fdir: 6.4.5(picomatch@4.0.2)
+      fdir: 6.4.6(picomatch@4.0.2)
       picomatch: 4.0.2
 
   tinyglobby@0.2.14:
     dependencies:
-      fdir: 6.4.5(picomatch@4.0.2)
+      fdir: 6.4.6(picomatch@4.0.2)
       picomatch: 4.0.2
 
   tinypool@1.1.0: {}
@@ -2312,7 +2312,7 @@ snapshots:
   vite@6.3.5(@types/node@20.19.0)(yaml@2.8.0):
     dependencies:
       esbuild: 0.25.5
-      fdir: 6.4.5(picomatch@4.0.2)
+      fdir: 6.4.6(picomatch@4.0.2)
       picomatch: 4.0.2
       postcss: 8.5.4
       rollup: 4.42.0
