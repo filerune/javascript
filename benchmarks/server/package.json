@@ -8,6 +8,6 @@
     },
     "dependencies": {
         "@filerune/fusion-node": "workspace:~",
-        "vitest": "^3.2.3"
+        "vitest": "^3.2.4"
     }
 }
