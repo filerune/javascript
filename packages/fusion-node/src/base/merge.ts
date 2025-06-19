@@ -23,7 +23,11 @@ async function merge(options: MergeOptions): Promise<boolean> {
 
     // custom
 
-    if (mergeFunction) return await mergeFunction({ inDir, outFile });
+    if (mergeFunction)
+        return await mergeFunction({
+            inDir,
+            outFile,
+        });
 
     // default
 
@@ -35,7 +39,7 @@ async function merge(options: MergeOptions): Promise<boolean> {
         fs = await import("node:fs");
         fsp = await import("node:fs/promises");
         path = await import("node:path");
-    } catch (e: unknown) {
+    } catch (_: unknown) {
         throw new Error("Node.js is required to use the merge function");
     }
 
@@ -50,10 +54,14 @@ async function merge(options: MergeOptions): Promise<boolean> {
 
     // remove and create
     if (fs.existsSync(outFile)) {
-        await fsp.rm(outFile, { recursive: true });
+        await fsp.rm(outFile, {
+            recursive: true,
+        });
     }
 
-    await fsp.mkdir(path.dirname(outFile), { recursive: true });
+    await fsp.mkdir(path.dirname(outFile), {
+        recursive: true,
+    });
 
     // count files
     const length: number = await fsp

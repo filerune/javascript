@@ -48,7 +48,9 @@ const isTypeOfFileChunks = (chunks: FileChunk[]): boolean => {
  * ```
  */
 const isTypeOfFileChunk = (chunk: FileChunk): boolean => {
-    return isTypeOfFileChunks([chunk]);
+    return isTypeOfFileChunks([
+        chunk,
+    ]);
 };
 
 /**

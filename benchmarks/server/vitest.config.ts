@@ -1,11 +1,15 @@
+import tsconfigPaths from "vite-tsconfig-paths";
 import { defineConfig } from "vitest/config";
 
-import tsconfigPaths from "vite-tsconfig-paths";
-
 export default defineConfig({
-    plugins: [tsconfigPaths()],
+    plugins: [
+        tsconfigPaths(),
+    ],
     optimizeDeps: {
-        exclude: ["@filerune/fusion", "@filerune/fusion-node"],
+        exclude: [
+            "@filerune/fusion",
+            "@filerune/fusion-node",
+        ],
     },
     test: {
         sequence: {

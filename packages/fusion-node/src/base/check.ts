@@ -46,7 +46,7 @@ async function check(options: CheckOptions): Promise<CheckResult> {
         fs = await import("node:fs");
         fsp = await import("node:fs/promises");
         path = await import("node:path");
-    } catch (e: unknown) {
+    } catch (_: unknown) {
         throw new Error("Node.js is required to use the check function");
     }
 

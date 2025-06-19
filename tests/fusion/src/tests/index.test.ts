@@ -25,7 +25,9 @@ describe("tests for split, check and merge", (): void => {
 
         it("should be able to split base64 data", async (): Promise<void> => {
             const fileData: string = await blobToBase64(
-                new Blob([await fsp.readFile(inFile)]),
+                new Blob([
+                    await fsp.readFile(inFile),
+                ]),
             );
 
             const result: SplitResult = await split({
@@ -53,7 +55,9 @@ describe("tests for split, check and merge", (): void => {
 
         it("should be able to split File", async (): Promise<void> => {
             const fileData: File = new File(
-                [await fsp.readFile(inFile)],
+                [
+                    await fsp.readFile(inFile),
+                ],
                 fileName,
             );
 

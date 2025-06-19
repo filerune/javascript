@@ -28,7 +28,11 @@ const split = async (options: SplitOptions): Promise<SplitResult> => {
 
     // custom split function
 
-    if (splitFunction) return await splitFunction({ file, chunkSize });
+    if (splitFunction)
+        return await splitFunction({
+            file,
+            chunkSize,
+        });
 
     let blob: Blob;
 
@@ -46,14 +50,18 @@ const split = async (options: SplitOptions): Promise<SplitResult> => {
                 bytes[i] = data.charCodeAt(i);
             }
 
-            blob = new Blob([bytes]);
+            blob = new Blob([
+                bytes,
+            ]);
         } else {
             throw new TypeError(ermsg);
         }
     }
     // uint8array
     else if (file instanceof Uint8Array) {
-        blob = new Blob([file]);
+        blob = new Blob([
+            file,
+        ]);
     }
     // file / blob
     else if (file instanceof Blob) {

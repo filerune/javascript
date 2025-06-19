@@ -45,7 +45,9 @@
     "main": "./dist/index.js",
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",
-    "files": ["dist"],
+    "files": [
+        "dist"
+    ],
     "dependencies": {
         "@filerune/fusion": "workspace:~",
         "ts-vista": "~0.2.2"

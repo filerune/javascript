@@ -23,7 +23,10 @@ const merge = async (options: MergeOptions): Promise<MergeResult> => {
 
     // custom merge function
 
-    if (mergeFunction) return await mergeFunction({ chunks });
+    if (mergeFunction)
+        return await mergeFunction({
+            chunks,
+        });
 
     // merge function
 

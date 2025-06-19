@@ -1,31 +1,25 @@
-export type { FileChunk } from "#/@types/chunk";
-
-export type {
-    SplitFunctionOptions,
-    SplitOptions,
-    SplitResult,
-} from "#/@types/base/split";
-
 export type {
     CheckFunctionOptions,
     CheckOptions,
-    CheckResultError,
     CheckResult,
+    CheckResultError,
 } from "#/@types/base/check";
-
 export type {
     MergeFunctionOptions,
     MergeOptions,
     MergeResult,
 } from "#/@types/base/merge";
-
-export {
-    isTypeOfFileChunks,
-    isTypeOfFileChunk,
-} from "#/functions/chunk";
-
-export { split } from "#/base/split";
+export type {
+    SplitFunctionOptions,
+    SplitOptions,
+    SplitResult,
+} from "#/@types/base/split";
+export type { FileChunk } from "#/@types/chunk";
 
 export { check } from "#/base/check";
-
 export { merge } from "#/base/merge";
+export { split } from "#/base/split";
+export {
+    isTypeOfFileChunk,
+    isTypeOfFileChunks,
+} from "#/functions/chunk";

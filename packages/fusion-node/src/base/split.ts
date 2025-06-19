@@ -25,7 +25,11 @@ const split = async (options: SplitOptions): Promise<SplitResult> => {
     // custom
 
     if (splitFunction)
-        return await splitFunction({ inFile, outDir, chunkSize });
+        return await splitFunction({
+            inFile,
+            outDir,
+            chunkSize,
+        });
 
     // default
 
@@ -37,7 +41,7 @@ const split = async (options: SplitOptions): Promise<SplitResult> => {
         fs = await import("node:fs");
         fsp = await import("node:fs/promises");
         path = await import("node:path");
-    } catch (e: unknown) {
+    } catch (_: unknown) {
         throw new Error("Node.js is required to use the split function");
     }
 
@@ -50,10 +54,14 @@ const split = async (options: SplitOptions): Promise<SplitResult> => {
     }
 
     if (fs.existsSync(outDir)) {
-        await fsp.rm(outDir, { recursive: true });
+        await fsp.rm(outDir, {
+            recursive: true,
+        });
     }
 
-    await fsp.mkdir(outDir, { recursive: true });
+    await fsp.mkdir(outDir, {
+        recursive: true,
+    });
 
     let fileSize: number = 0;
     let index: number = 0;
@@ -69,7 +77,10 @@ const split = async (options: SplitOptions): Promise<SplitResult> => {
             "data",
             (data: string | Buffer<ArrayBufferLike>): void => {
                 // previous + current buffers
-                current = Buffer.concat([current, Buffer.from(data)]);
+                current = Buffer.concat([
+                    current,
+                    Buffer.from(data),
+                ]);
 
                 while (current.length >= chunkSize) {
                     const _current: Buffer = current.subarray(0, chunkSize);
@@ -102,7 +113,10 @@ const split = async (options: SplitOptions): Promise<SplitResult> => {
         readStream.on("close", () => resolve(void 0));
     });
 
-    return { fileSize, totalChunks: index };
+    return {
+        fileSize,
+        totalChunks: index,
+    };
 };
 
 export { split };
