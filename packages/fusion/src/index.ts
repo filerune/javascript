@@ -1,3 +1,8 @@
+/**
+ * Main module
+ * @module index
+ */
+
 export type {
     CheckFunctionOptions,
     CheckOptions,
@@ -14,12 +19,7 @@ export type {
     SplitOptions,
     SplitResult,
 } from "#/@types/base/split";
-export type { FileChunk } from "#/@types/chunk";
 
 export { check } from "#/base/check";
 export { merge } from "#/base/merge";
 export { split } from "#/base/split";
-export {
-    isTypeOfFileChunk,
-    isTypeOfFileChunks,
-} from "#/functions/chunk";

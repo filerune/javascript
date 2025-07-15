@@ -19,13 +19,14 @@ const isTypeOfFileChunks = (chunks: FileChunk[]): boolean => {
         return false;
     }
 
-    if (
-        chunks.length > 0 &&
-        (typeof chunks[0] !== "object" ||
-            typeof chunks[0].index !== "number" ||
-            typeof chunks[0].blob !== "object")
-    ) {
-        return false;
+    for (const chunk of chunks) {
+        if (
+            typeof chunk !== "object" ||
+            typeof chunk.index !== "number" ||
+            typeof chunk.blob !== "object"
+        ) {
+            return false;
+        }
     }
 
     return true;

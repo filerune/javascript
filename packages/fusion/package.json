@@ -40,10 +40,19 @@
             "import": "./dist/index.mjs",
             "require": "./dist/index.js"
         },
-        "./internal": {
-            "types": "./dist/internal.d.ts",
-            "import": "./dist/internal.mjs",
-            "require": "./dist/internal.js"
+        "./chunk": {
+            "types": "./dist/chunk.d.ts",
+            "import": "./dist/chunk.mjs",
+            "require": "./dist/chunk.js"
+        },
+        "./types/base/split": {
+            "types": "./dist/@types/base/split.d.ts"
+        },
+        "./types/base/check": {
+            "types": "./dist/@types/base/check.d.ts"
+        },
+        "./types/base/merge": {
+            "types": "./dist/@types/base/merge.d.ts"
         },
         "./package.json": "./package.json"
     },

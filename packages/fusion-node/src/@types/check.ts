@@ -1,5 +1,5 @@
 import type { CheckResult } from "@filerune/fusion";
-import type { CheckBaseOptions } from "@filerune/fusion/internal";
+import type { CheckBaseOptions } from "@filerune/fusion/types/base/check";
 import type { Format } from "ts-vista";
 
 type _CheckOptions = {

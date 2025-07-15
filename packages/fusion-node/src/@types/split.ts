@@ -1,4 +1,4 @@
-import type { SplitBaseOptions } from "@filerune/fusion/internal";
+import type { SplitBaseOptions } from "@filerune/fusion/types/base/split";
 import type { Format } from "ts-vista";
 
 type _SplitOptions = {

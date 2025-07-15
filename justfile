@@ -4,7 +4,7 @@ set windows-shell := ["powershell"]
 node_bin := "./node_modules/.bin/"
 tsc := node_bin + "tsc"
 biome := node_bin + "biome"
-tsup := node_bin + "tsup"
+tsdown := node_bin + "tsdown"
 vitest := node_bin + "vitest"
 typedoc := node_bin + "typedoc"
 
@@ -50,8 +50,14 @@ fmt:
 
 # Build packages
 build:
-    cd ./{{fusion}} && ../../{{tsup}}
-    cd ./{{fusion_node}} && ../../{{tsup}}
+    cd ./{{fusion}} && ../../{{tsdown}} -c tsdown.config.ts
+    cd ./{{fusion_node}} && ../../{{tsdown}} -c tsdown.config.ts
+    rm ./{{fusion}}/dist/@types/base/split.js
+    rm ./{{fusion}}/dist/@types/base/split.mjs
+    rm ./{{fusion}}/dist/@types/base/check.js
+    rm ./{{fusion}}/dist/@types/base/check.mjs
+    rm ./{{fusion}}/dist/@types/base/merge.js
+    rm ./{{fusion}}/dist/@types/base/merge.mjs
 
 # Run tests
 test:
