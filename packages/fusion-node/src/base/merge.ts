@@ -18,7 +18,7 @@ import type { MergeOptions } from "#/@types/merge";
  * });
  * ```
  */
-async function merge(options: MergeOptions): Promise<boolean> {
+const merge = async (options: MergeOptions): Promise<boolean> => {
     const { inDir, outFile, mergeFunction }: MergeOptions = options;
 
     // custom
@@ -101,6 +101,6 @@ async function merge(options: MergeOptions): Promise<boolean> {
     });
 
     return true;
-}
+};
 
 export { merge };

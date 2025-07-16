@@ -22,7 +22,7 @@ import type { CheckOptions } from "#/@types/check";
  * });
  * ```
  */
-async function check(options: CheckOptions): Promise<CheckResult> {
+const check = async (options: CheckOptions): Promise<CheckResult> => {
     const { inDir, fileSize, totalChunks, checkFunction }: CheckOptions =
         options;
 
@@ -99,6 +99,6 @@ async function check(options: CheckOptions): Promise<CheckResult> {
     return {
         success: true,
     };
-}
+};
 
 export { check };
