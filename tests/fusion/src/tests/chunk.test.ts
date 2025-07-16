@@ -1,4 +1,4 @@
-import type { FileChunk } from "@filerune/fusion";
+import type { FileChunk } from "@filerune/fusion/chunk";
 
 import { isTypeOfFileChunk, isTypeOfFileChunks } from "@filerune/fusion/chunk";
 import { describe, expect, it } from "vitest";

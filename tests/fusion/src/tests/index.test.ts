@@ -1,9 +1,5 @@
-import type {
-    CheckResult,
-    FileChunk,
-    MergeResult,
-    SplitResult,
-} from "@filerune/fusion";
+import type { CheckResult, MergeResult, SplitResult } from "@filerune/fusion";
+import type { FileChunk } from "@filerune/fusion/chunk";
 
 import * as fsp from "node:fs/promises";
 
