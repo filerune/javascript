@@ -1,4 +1,4 @@
-[@filerune/fusion](../README.md) / merge
+[@filerune/fusion](../../README.md) / [index](../README.md) / merge
 
 # Function: merge()
 
@@ -6,7 +6,7 @@
 function merge(options): Promise<MergeResult>;
 ```
 
-Defined in: [packages/fusion/src/base/merge.ts:21](https://github.com/filerune/javascript/blob/e35128d5deea4a3f64742db5fcfda1a7f8c2cb71/packages/fusion/src/base/merge.ts#L21)
+Defined in: [packages/fusion/src/base/merge.ts:21](https://github.com/filerune/javascript/blob/a2c89ff92ad9fd5f140f3923255826b139da58bf/packages/fusion/src/base/merge.ts#L21)
 
 This function merges the chunks by using the `chunks` parameters.
 
@@ -28,7 +28,7 @@ await merge({
 
 #### chunks
 
-[`FileChunk`](../type-aliases/FileChunk.md)[]
+[`FileChunk`](../../chunk/type-aliases/FileChunk.md)[]
 
 Chunks to be merged in the `merge` function.
 

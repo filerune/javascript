@@ -1,4 +1,4 @@
-[@filerune/fusion](../README.md) / check
+[@filerune/fusion](../../README.md) / [index](../README.md) / check
 
 # Function: check()
 
@@ -6,7 +6,7 @@
 function check(options): Promise<CheckResult>;
 ```
 
-Defined in: [packages/fusion/src/base/check.ts:26](https://github.com/filerune/javascript/blob/e35128d5deea4a3f64742db5fcfda1a7f8c2cb71/packages/fusion/src/base/check.ts#L26)
+Defined in: [packages/fusion/src/base/check.ts:26](https://github.com/filerune/javascript/blob/a2c89ff92ad9fd5f140f3923255826b139da58bf/packages/fusion/src/base/check.ts#L26)
 
 This function checks file integrity.
 
@@ -41,7 +41,7 @@ Custom check function for the `check` function.
 
 #### chunks
 
-[`FileChunk`](../type-aliases/FileChunk.md)[]
+[`FileChunk`](../../chunk/type-aliases/FileChunk.md)[]
 
 Chunks to be checked in the `check` function.
 

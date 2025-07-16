@@ -1,4 +1,4 @@
-[@filerune/fusion](../README.md) / CheckResultError
+[@filerune/fusion](../../README.md) / [index](../README.md) / CheckResultError
 
 # Type Alias: CheckResultError
 
@@ -13,7 +13,7 @@ type CheckResultError = object &
 };
 ```
 
-Defined in: [packages/fusion/src/@types/base/check.ts:33](https://github.com/filerune/javascript/blob/e35128d5deea4a3f64742db5fcfda1a7f8c2cb71/packages/fusion/src/@types/base/check.ts#L33)
+Defined in: [packages/fusion/src/@types/base/check.ts:33](https://github.com/filerune/javascript/blob/a2c89ff92ad9fd5f140f3923255826b139da58bf/packages/fusion/src/@types/base/check.ts#L33)
 
 Result error of the `check` function.
 

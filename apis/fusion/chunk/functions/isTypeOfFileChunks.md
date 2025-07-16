@@ -1,4 +1,4 @@
-[@filerune/fusion](../README.md) / isTypeOfFileChunks
+[@filerune/fusion](../../README.md) / [chunk](../README.md) / isTypeOfFileChunks
 
 # Function: isTypeOfFileChunks()
 
@@ -6,7 +6,7 @@
 function isTypeOfFileChunks(chunks): boolean;
 ```
 
-Defined in: [packages/fusion/src/functions/chunk.ts:17](https://github.com/filerune/javascript/blob/e35128d5deea4a3f64742db5fcfda1a7f8c2cb71/packages/fusion/src/functions/chunk.ts#L17)
+Defined in: [packages/fusion/src/functions/chunk.ts:17](https://github.com/filerune/javascript/blob/a2c89ff92ad9fd5f140f3923255826b139da58bf/packages/fusion/src/functions/chunk.ts#L17)
 
 This function checks whether the `chunks` parameter is an Array of Chunk.
 

@@ -13,7 +13,7 @@ type CheckResult =
 };
 ```
 
-Defined in: packages/fusion/dist/internal-Dsk8EtP4.d.ts:105
+Defined in: packages/fusion/dist/@types/base/check.d.ts:51
 
 Result of the `check` function.
 

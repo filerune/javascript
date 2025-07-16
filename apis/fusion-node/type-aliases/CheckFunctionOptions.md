@@ -6,6 +6,6 @@
 type CheckFunctionOptions = Format<_CheckOptions>;
 ```
 
-Defined in: [packages/fusion-node/src/@types/check.ts:15](https://github.com/filerune/javascript/blob/e35128d5deea4a3f64742db5fcfda1a7f8c2cb71/packages/fusion-node/src/@types/check.ts#L15)
+Defined in: [packages/fusion-node/src/@types/check.ts:15](https://github.com/filerune/javascript/blob/a2c89ff92ad9fd5f140f3923255826b139da58bf/packages/fusion-node/src/@types/check.ts#L15)
 
 Options for the custom split function in the `split` function.

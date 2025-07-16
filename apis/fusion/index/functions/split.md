@@ -1,4 +1,4 @@
-[@filerune/fusion](../README.md) / split
+[@filerune/fusion](../../README.md) / [index](../README.md) / split
 
 # Function: split()
 
@@ -6,7 +6,7 @@
 function split(options): Promise<SplitResult>;
 ```
 
-Defined in: [packages/fusion/src/base/split.ts:26](https://github.com/filerune/javascript/blob/e35128d5deea4a3f64742db5fcfda1a7f8c2cb71/packages/fusion/src/base/split.ts#L26)
+Defined in: [packages/fusion/src/base/split.ts:26](https://github.com/filerune/javascript/blob/a2c89ff92ad9fd5f140f3923255826b139da58bf/packages/fusion/src/base/split.ts#L26)
 
 This function splits file into chunks,
 and the chunks can be used to check and merge later.
