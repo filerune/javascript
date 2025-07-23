@@ -6,16 +6,11 @@
         "@biomejs/biome": "^2.1.2",
         "@types/node": "^20.19.9",
         "happy-dom": "^18.0.1",
-        "tsdown": "^0.12.9",
+        "tsdown": "~0.13.0",
         "typedoc": "~0.28.7",
         "typedoc-plugin-markdown": "^4.7.1",
         "typescript": "^5.8.3",
         "vite-tsconfig-paths": "^5.1.4"
-    },
-    "pnpm": {
-        "overrides": {
-            "rolldown": "1.0.0-beta.27"
-        }
     },
     "engines": {
         "node": ">=20"
