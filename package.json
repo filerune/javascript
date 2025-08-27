@@ -6,7 +6,7 @@
         "@biomejs/biome": "^2.2.2",
         "@types/node": "^20.19.11",
         "happy-dom": "^18.0.1",
-        "tsdown": "~0.14.1",
+        "tsdown": "~0.14.2",
         "typedoc": "~0.28.11",
         "typedoc-plugin-markdown": "^4.8.1",
         "typescript": "^5.9.2",
