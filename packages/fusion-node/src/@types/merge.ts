@@ -24,9 +24,7 @@ type MergeOptions = Format<
         /**
          * Custom merge function for the `merge` function.
          */
-        mergeFunction?: (
-            options: MergeFunctionOptions,
-        ) => boolean | Promise<boolean>;
+        mergeFunction?: (options: MergeFunctionOptions) => void | Promise<void>;
     }
 >;
 
