@@ -60,7 +60,7 @@ const split = async (options: SplitOptions): Promise<SplitResult> => {
     // uint8array
     else if (file instanceof Uint8Array) {
         blob = new Blob([
-            file,
+            file as BlobPart,
         ]);
     }
     // file / blob
