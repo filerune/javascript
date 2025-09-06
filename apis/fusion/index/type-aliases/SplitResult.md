@@ -6,7 +6,7 @@
 type SplitResult = object;
 ```
 
-Defined in: [packages/fusion/src/@types/base/split.ts:30](https://github.com/filerune/javascript/blob/a2c89ff92ad9fd5f140f3923255826b139da58bf/packages/fusion/src/@types/base/split.ts#L30)
+Defined in: [packages/fusion/src/@types/base/split.ts:30](https://github.com/filerune/javascript/blob/d4f2362b551948c367109c80d3f38c321a319a3e/packages/fusion/src/@types/base/split.ts#L30)
 
 Result of the `split` function.
 
@@ -18,7 +18,7 @@ Result of the `split` function.
 chunks: FileChunk[];
 ```
 
-Defined in: [packages/fusion/src/@types/base/split.ts:34](https://github.com/filerune/javascript/blob/a2c89ff92ad9fd5f140f3923255826b139da58bf/packages/fusion/src/@types/base/split.ts#L34)
+Defined in: [packages/fusion/src/@types/base/split.ts:34](https://github.com/filerune/javascript/blob/d4f2362b551948c367109c80d3f38c321a319a3e/packages/fusion/src/@types/base/split.ts#L34)
 
 The chunks splitted from the original file.
 
@@ -30,7 +30,7 @@ The chunks splitted from the original file.
 fileSize: number;
 ```
 
-Defined in: [packages/fusion/src/@types/base/split.ts:38](https://github.com/filerune/javascript/blob/a2c89ff92ad9fd5f140f3923255826b139da58bf/packages/fusion/src/@types/base/split.ts#L38)
+Defined in: [packages/fusion/src/@types/base/split.ts:38](https://github.com/filerune/javascript/blob/d4f2362b551948c367109c80d3f38c321a319a3e/packages/fusion/src/@types/base/split.ts#L38)
 
 Size of the original file.
 
@@ -42,6 +42,6 @@ Size of the original file.
 totalChunks: number;
 ```
 
-Defined in: [packages/fusion/src/@types/base/split.ts:42](https://github.com/filerune/javascript/blob/a2c89ff92ad9fd5f140f3923255826b139da58bf/packages/fusion/src/@types/base/split.ts#L42)
+Defined in: [packages/fusion/src/@types/base/split.ts:42](https://github.com/filerune/javascript/blob/d4f2362b551948c367109c80d3f38c321a319a3e/packages/fusion/src/@types/base/split.ts#L42)
 
 The total number of chunks splitted from the original file.

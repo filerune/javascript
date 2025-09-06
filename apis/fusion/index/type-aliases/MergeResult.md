@@ -6,7 +6,7 @@
 type MergeResult = object;
 ```
 
-Defined in: [packages/fusion/src/@types/base/merge.ts:34](https://github.com/filerune/javascript/blob/a2c89ff92ad9fd5f140f3923255826b139da58bf/packages/fusion/src/@types/base/merge.ts#L34)
+Defined in: [packages/fusion/src/@types/base/merge.ts:34](https://github.com/filerune/javascript/blob/d4f2362b551948c367109c80d3f38c321a319a3e/packages/fusion/src/@types/base/merge.ts#L34)
 
 Result of the `merge` function.
 
@@ -18,6 +18,6 @@ Result of the `merge` function.
 blob: Blob;
 ```
 
-Defined in: [packages/fusion/src/@types/base/merge.ts:38](https://github.com/filerune/javascript/blob/a2c89ff92ad9fd5f140f3923255826b139da58bf/packages/fusion/src/@types/base/merge.ts#L38)
+Defined in: [packages/fusion/src/@types/base/merge.ts:38](https://github.com/filerune/javascript/blob/d4f2362b551948c367109c80d3f38c321a319a3e/packages/fusion/src/@types/base/merge.ts#L38)
 
 merged blob.

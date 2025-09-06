@@ -3,10 +3,10 @@
 # Function: merge()
 
 ```ts
-function merge(options): Promise<boolean>;
+function merge(options): Promise<void>;
 ```
 
-Defined in: [packages/fusion-node/src/base/merge.ts:21](https://github.com/filerune/javascript/blob/a2c89ff92ad9fd5f140f3923255826b139da58bf/packages/fusion-node/src/base/merge.ts#L21)
+Defined in: [packages/fusion-node/src/base/merge.ts:21](https://github.com/filerune/javascript/blob/d4f2362b551948c367109c80d3f38c321a319a3e/packages/fusion-node/src/base/merge.ts#L21)
 
 This function merges the chunks from a directory to a specified path directly.
 
@@ -35,7 +35,7 @@ Input directory to be merged in the `merge` function.
 
 #### mergeFunction?
 
-(`options`) => `boolean` \| `Promise`\<`boolean`\>
+(`options`) => `void` \| `Promise`\<`void`\>
 
 Custom merge function for the `merge` function.
 
@@ -47,4 +47,4 @@ Output file after merging in the `merge` function.
 
 ## Returns
 
-`Promise`\<`boolean`\>
+`Promise`\<`void`\>

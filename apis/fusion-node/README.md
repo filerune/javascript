@@ -1,6 +1,6 @@
 [< Back](./../../README.md)
 
-# @filerune/fusion-node v0.1.1
+# @filerune/fusion-node v0.2.0
 
 ## Type Aliases
 

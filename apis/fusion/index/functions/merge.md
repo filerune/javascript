@@ -6,7 +6,7 @@
 function merge(options): Promise<MergeResult>;
 ```
 
-Defined in: [packages/fusion/src/base/merge.ts:21](https://github.com/filerune/javascript/blob/a2c89ff92ad9fd5f140f3923255826b139da58bf/packages/fusion/src/base/merge.ts#L21)
+Defined in: [packages/fusion/src/base/merge.ts:21](https://github.com/filerune/javascript/blob/d4f2362b551948c367109c80d3f38c321a319a3e/packages/fusion/src/base/merge.ts#L21)
 
 This function merges the chunks by using the `chunks` parameters.
 

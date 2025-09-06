@@ -17,7 +17,7 @@ Defined in: packages/fusion/dist/@types/base/check.d.ts:28
 
 Result error of the `check` function.
 
-## Type declaration
+## Type Declaration
 
 ### message
 

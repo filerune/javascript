@@ -17,7 +17,7 @@ Defined in: packages/fusion/dist/@types/base/check.d.ts:51
 
 Result of the `check` function.
 
-## Type declaration
+## Type Declaration
 
 ```ts
 {
