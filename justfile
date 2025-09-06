@@ -91,6 +91,32 @@ api:
     cd ./{{fusion}} && ../../{{typedoc}}
     cd ./{{fusion_node}} && ../../{{typedoc}}
 
+# Publish fusion package as dry-run
+publish-dry-fusion:
+    cd ./{{fusion}} && pnpm publish --no-git-checks --dry-run
+
+# Publish fusion-node package as dry-run
+publish-dry-fusion-node:
+    cd ./{{fusion_node}} && pnpm publish --no-git-checks --dry-run
+
+# Publish all packages as dry-run
+publish-try:
+    just publish-dry-fusion
+    just publish-dry-fusion-node
+
+# Publish fusion package
+publish-fusion:
+    cd ./{{fusion}} && pnpm publish
+
+# Publish fusion-node package
+publish-fusion-node:
+    cd ./{{fusion_node}} && pnpm publish
+
+# Publish all packages
+publish:
+    just publish-fusion
+    just publish-fusion-node
+
 # Clean builds
 clean:
     rm -rf ./{{fusion}}/dist
