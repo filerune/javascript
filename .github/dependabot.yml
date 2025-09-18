@@ -9,3 +9,7 @@ updates:
       ignore:
           - dependency-name: "@types/node"
             versions: [">=21"]
+      cooldown:
+          default-days: 1
+          include:
+              - "*"
