@@ -21,8 +21,8 @@ importers:
         specifier: ^20.19.21
         version: 20.19.21
       happy-dom:
-        specifier: ^20.0.0
-        version: 20.0.0
+        specifier: ^20.0.2
+        version: 20.0.2
       tsdown:
         specifier: ~0.15.7
         version: 0.15.7(typescript@5.9.3)
@@ -46,7 +46,7 @@ importers:
         version: link:../../packages/fusion
       vitest:
         specifier: ^3.2.4
-        version: 3.2.4(@types/node@20.19.21)(happy-dom@20.0.0)(jiti@2.6.1)(yaml@2.8.1)
+        version: 3.2.4(@types/node@20.19.21)(happy-dom@20.0.2)(jiti@2.6.1)(yaml@2.8.1)
 
   benchmarks/server:
     dependencies:
@@ -55,7 +55,7 @@ importers:
         version: link:../../packages/fusion-node
       vitest:
         specifier: ^3.2.4
-        version: 3.2.4(@types/node@20.19.21)(happy-dom@20.0.0)(jiti@2.6.1)(yaml@2.8.1)
+        version: 3.2.4(@types/node@20.19.21)(happy-dom@20.0.2)(jiti@2.6.1)(yaml@2.8.1)
 
   packages/filerune: {}
 
@@ -84,7 +84,7 @@ importers:
         version: 6.5.0(picomatch@4.0.3)
       vitest:
         specifier: ^3.2.4
-        version: 3.2.4(@types/node@20.19.21)(happy-dom@20.0.0)(jiti@2.6.1)(yaml@2.8.1)
+        version: 3.2.4(@types/node@20.19.21)(happy-dom@20.0.2)(jiti@2.6.1)(yaml@2.8.1)
 
   tests/fusion-node:
     dependencies:
@@ -96,7 +96,7 @@ importers:
         version: 6.5.0(picomatch@4.0.3)
       vitest:
         specifier: ^3.2.4
-        version: 3.2.4(@types/node@20.19.21)(happy-dom@20.0.0)(jiti@2.6.1)(yaml@2.8.1)
+        version: 3.2.4(@types/node@20.19.21)(happy-dom@20.0.2)(jiti@2.6.1)(yaml@2.8.1)
 
 packages:
 
@@ -774,8 +774,8 @@ packages:
   globrex@0.1.2:
     resolution: {integrity: sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==}
 
-  happy-dom@20.0.0:
-    resolution: {integrity: sha512-GkWnwIFxVGCf2raNrxImLo397RdGhLapj5cT3R2PT7FwL62Ze1DROhzmYW7+J3p9105DYMVenEejEbnq5wA37w==}
+  happy-dom@20.0.2:
+    resolution: {integrity: sha512-pYOyu624+6HDbY+qkjILpQGnpvZOusItCk+rvF5/V+6NkcgTKnbOldpIy22tBnxoaLtlM9nXgoqAcW29/B7CIw==}
     engines: {node: '>=20.0.0'}
 
   hookable@5.5.3:
@@ -1603,7 +1603,7 @@ snapshots:
 
   globrex@0.1.2: {}
 
-  happy-dom@20.0.0:
+  happy-dom@20.0.2:
     dependencies:
       '@types/node': 20.19.21
       '@types/whatwg-mimetype': 3.0.2
@@ -1885,7 +1885,7 @@ snapshots:
       jiti: 2.6.1
       yaml: 2.8.1
 
-  vitest@3.2.4(@types/node@20.19.21)(happy-dom@20.0.0)(jiti@2.6.1)(yaml@2.8.1):
+  vitest@3.2.4(@types/node@20.19.21)(happy-dom@20.0.2)(jiti@2.6.1)(yaml@2.8.1):
     dependencies:
       '@types/chai': 5.2.2
       '@vitest/expect': 3.2.4
@@ -1912,7 +1912,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 20.19.21
-      happy-dom: 20.0.0
+      happy-dom: 20.0.2
     transitivePeerDependencies:
       - jiti
       - less
