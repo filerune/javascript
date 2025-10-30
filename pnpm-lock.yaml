@@ -18,8 +18,8 @@ importers:
         specifier: ^2.3.2
         version: 2.3.2
       '@types/node':
-        specifier: ^20.19.23
-        version: 20.19.23
+        specifier: ^20.19.24
+        version: 20.19.24
       happy-dom:
         specifier: ^20.0.8
         version: 20.0.8
@@ -37,7 +37,7 @@ importers:
         version: 5.9.3
       vite-tsconfig-paths:
         specifier: ^5.1.4
-        version: 5.1.4(typescript@5.9.3)(vite@7.1.12(@types/node@20.19.23)(jiti@2.6.1)(yaml@2.8.1))
+        version: 5.1.4(typescript@5.9.3)(vite@7.1.12(@types/node@20.19.24)(jiti@2.6.1)(yaml@2.8.1))
 
   benchmarks/client:
     dependencies:
@@ -46,7 +46,7 @@ importers:
         version: link:../../packages/fusion
       vitest:
         specifier: ^4.0.4
-        version: 4.0.4(@types/node@20.19.23)(happy-dom@20.0.8)(jiti@2.6.1)(yaml@2.8.1)
+        version: 4.0.4(@types/node@20.19.24)(happy-dom@20.0.8)(jiti@2.6.1)(yaml@2.8.1)
 
   benchmarks/server:
     dependencies:
@@ -55,7 +55,7 @@ importers:
         version: link:../../packages/fusion-node
       vitest:
         specifier: ^4.0.4
-        version: 4.0.4(@types/node@20.19.23)(happy-dom@20.0.8)(jiti@2.6.1)(yaml@2.8.1)
+        version: 4.0.4(@types/node@20.19.24)(happy-dom@20.0.8)(jiti@2.6.1)(yaml@2.8.1)
 
   packages/filerune: {}
 
@@ -84,7 +84,7 @@ importers:
         version: 6.5.0(picomatch@4.0.3)
       vitest:
         specifier: ^4.0.4
-        version: 4.0.4(@types/node@20.19.23)(happy-dom@20.0.8)(jiti@2.6.1)(yaml@2.8.1)
+        version: 4.0.4(@types/node@20.19.24)(happy-dom@20.0.8)(jiti@2.6.1)(yaml@2.8.1)
 
   tests/fusion-node:
     dependencies:
@@ -96,7 +96,7 @@ importers:
         version: 6.5.0(picomatch@4.0.3)
       vitest:
         specifier: ^4.0.4
-        version: 4.0.4(@types/node@20.19.23)(happy-dom@20.0.8)(jiti@2.6.1)(yaml@2.8.1)
+        version: 4.0.4(@types/node@20.19.24)(happy-dom@20.0.8)(jiti@2.6.1)(yaml@2.8.1)
 
 packages:
 
@@ -636,8 +636,8 @@ packages:
   '@types/hast@3.0.4':
     resolution: {integrity: sha512-WPs+bbQw5aCj+x6laNGWLH3wviHtoCv/P3+otBhbOhJgG8qtpdAMlTCxLtsTWA7LH1Oh/bFCHsBn0TPS5m30EQ==}
 
-  '@types/node@20.19.23':
-    resolution: {integrity: sha512-yIdlVVVHXpmqRhtyovZAcSy0MiPcYWGkoO4CGe/+jpP0hmNuihm4XhHbADpK++MsiLHP5MVlv+bcgdF99kSiFQ==}
+  '@types/node@20.19.24':
+    resolution: {integrity: sha512-FE5u0ezmi6y9OZEzlJfg37mqqf6ZDSF2V/NLjUyGrR9uTZ7Sb9F7bLNZ03S4XVUNRWGA7Ck4c1kK+YnuWjl+DA==}
 
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
@@ -1448,7 +1448,7 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.3
 
-  '@types/node@20.19.23':
+  '@types/node@20.19.24':
     dependencies:
       undici-types: 6.21.0
 
@@ -1465,13 +1465,13 @@ snapshots:
       chai: 6.2.0
       tinyrainbow: 3.0.3
 
-  '@vitest/mocker@4.0.4(vite@7.1.12(@types/node@20.19.23)(jiti@2.6.1)(yaml@2.8.1))':
+  '@vitest/mocker@4.0.4(vite@7.1.12(@types/node@20.19.24)(jiti@2.6.1)(yaml@2.8.1))':
     dependencies:
       '@vitest/spy': 4.0.4
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 7.1.12(@types/node@20.19.23)(jiti@2.6.1)(yaml@2.8.1)
+      vite: 7.1.12(@types/node@20.19.24)(jiti@2.6.1)(yaml@2.8.1)
 
   '@vitest/pretty-format@4.0.4':
     dependencies:
@@ -1592,7 +1592,7 @@ snapshots:
 
   happy-dom@20.0.8:
     dependencies:
-      '@types/node': 20.19.23
+      '@types/node': 20.19.24
       '@types/whatwg-mimetype': 3.0.2
       whatwg-mimetype: 3.0.0
 
@@ -1813,18 +1813,18 @@ snapshots:
       rolldown: 1.0.0-beta.45
       synckit: 0.11.11
 
-  vite-tsconfig-paths@5.1.4(typescript@5.9.3)(vite@7.1.12(@types/node@20.19.23)(jiti@2.6.1)(yaml@2.8.1)):
+  vite-tsconfig-paths@5.1.4(typescript@5.9.3)(vite@7.1.12(@types/node@20.19.24)(jiti@2.6.1)(yaml@2.8.1)):
     dependencies:
       debug: 4.4.1
       globrex: 0.1.2
       tsconfck: 3.1.5(typescript@5.9.3)
     optionalDependencies:
-      vite: 7.1.12(@types/node@20.19.23)(jiti@2.6.1)(yaml@2.8.1)
+      vite: 7.1.12(@types/node@20.19.24)(jiti@2.6.1)(yaml@2.8.1)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  vite@7.1.12(@types/node@20.19.23)(jiti@2.6.1)(yaml@2.8.1):
+  vite@7.1.12(@types/node@20.19.24)(jiti@2.6.1)(yaml@2.8.1):
     dependencies:
       esbuild: 0.25.11
       fdir: 6.5.0(picomatch@4.0.3)
@@ -1833,15 +1833,15 @@ snapshots:
       rollup: 4.52.5
       tinyglobby: 0.2.15
     optionalDependencies:
-      '@types/node': 20.19.23
+      '@types/node': 20.19.24
       fsevents: 2.3.3
       jiti: 2.6.1
       yaml: 2.8.1
 
-  vitest@4.0.4(@types/node@20.19.23)(happy-dom@20.0.8)(jiti@2.6.1)(yaml@2.8.1):
+  vitest@4.0.4(@types/node@20.19.24)(happy-dom@20.0.8)(jiti@2.6.1)(yaml@2.8.1):
     dependencies:
       '@vitest/expect': 4.0.4
-      '@vitest/mocker': 4.0.4(vite@7.1.12(@types/node@20.19.23)(jiti@2.6.1)(yaml@2.8.1))
+      '@vitest/mocker': 4.0.4(vite@7.1.12(@types/node@20.19.24)(jiti@2.6.1)(yaml@2.8.1))
       '@vitest/pretty-format': 4.0.4
       '@vitest/runner': 4.0.4
       '@vitest/snapshot': 4.0.4
@@ -1858,10 +1858,10 @@ snapshots:
       tinyexec: 0.3.2
       tinyglobby: 0.2.15
       tinyrainbow: 3.0.3
-      vite: 7.1.12(@types/node@20.19.23)(jiti@2.6.1)(yaml@2.8.1)
+      vite: 7.1.12(@types/node@20.19.24)(jiti@2.6.1)(yaml@2.8.1)
       why-is-node-running: 2.3.0
     optionalDependencies:
-      '@types/node': 20.19.23
+      '@types/node': 20.19.24
       happy-dom: 20.0.8
     transitivePeerDependencies:
       - jiti
