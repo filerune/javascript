@@ -6,10 +6,12 @@ updates:
           interval: "daily"
           time: "00:00"
           timezone: "Etc/UTC"
-      ignore:
-          - dependency-name: "@types/node"
-            versions: [">=21"]
       cooldown:
           default-days: 1
           include:
               - "*"
+      commit-message:
+          prefix: "chore"
+      ignore:
+          - dependency-name: "@types/node"
+            versions: [">=21"]
