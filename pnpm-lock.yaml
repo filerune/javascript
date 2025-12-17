@@ -36,8 +36,8 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
       vite-tsconfig-paths:
-        specifier: ^6.0.0
-        version: 6.0.0(typescript@5.9.3)(vite@7.2.6(@types/node@20.19.27)(yaml@2.8.1))
+        specifier: ^6.0.1
+        version: 6.0.1(typescript@5.9.3)(vite@7.2.6(@types/node@20.19.27)(yaml@2.8.1))
 
   benchmarks/client:
     dependencies:
@@ -971,8 +971,8 @@ packages:
       synckit:
         optional: true
 
-  vite-tsconfig-paths@6.0.0:
-    resolution: {integrity: sha512-0lGkM62rud1ShKWLbJpbTHPoJuZIL9QW1ecCueDhqxWrStIRsyHapBQ4eV05tBqrW9z6jkp9ybBVgLSWp+Mv1A==}
+  vite-tsconfig-paths@6.0.1:
+    resolution: {integrity: sha512-OQuYkfCQhc2T+n//0N7/oogTosgiSyZQ7dydrpUlH5SbnFTtplpekdY4GMi6jDwEpiwWlqeUJMyPfC2ePM1+2A==}
     peerDependencies:
       vite: '*'
     peerDependenciesMeta:
@@ -1754,7 +1754,7 @@ snapshots:
     dependencies:
       rolldown: 1.0.0-beta.53
 
-  vite-tsconfig-paths@6.0.0(typescript@5.9.3)(vite@7.2.6(@types/node@20.19.27)(yaml@2.8.1)):
+  vite-tsconfig-paths@6.0.1(typescript@5.9.3)(vite@7.2.6(@types/node@20.19.27)(yaml@2.8.1)):
     dependencies:
       debug: 4.4.3
       globrex: 0.1.2
