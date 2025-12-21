@@ -3,9 +3,19 @@ packages:
     - ./tests/*
     - ./benchmarks/*
 
+catalogs:
+    dep:
+        ts-vista: ~0.2.3
+    test:
+        fdir: ^6
+        happy-dom: ^20
+        vite-tsconfig-paths: ^6
+        vitest: ^4
+
 minimumReleaseAge: 1440
 
 minimumReleaseAgeExclude:
     - "@apst/biome"
     - "@apst/tsconfig"
     - "@apst/tsdown"
+    - "ts-vista"

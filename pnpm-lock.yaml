@@ -4,6 +4,25 @@ settings:
   autoInstallPeers: false
   excludeLinksFromLockfile: false
 
+catalogs:
+  dep:
+    ts-vista:
+      specifier: ~0.2.3
+      version: 0.2.3
+  test:
+    fdir:
+      specifier: ^6
+      version: 6.5.0
+    happy-dom:
+      specifier: ^20
+      version: 20.0.11
+    vite-tsconfig-paths:
+      specifier: ^6
+      version: 6.0.3
+    vitest:
+      specifier: ^4
+      version: 4.0.16
+
 importers:
 
   .:
@@ -20,12 +39,6 @@ importers:
       '@biomejs/biome':
         specifier: ^2.3.10
         version: 2.3.10
-      '@types/node':
-        specifier: ^20.19.27
-        version: 20.19.27
-      happy-dom:
-        specifier: ^20.0.11
-        version: 20.0.11
       tsdown:
         specifier: ~0.18.1
         version: 0.18.1(typescript@5.9.3)
@@ -38,9 +51,6 @@ importers:
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
-      vite-tsconfig-paths:
-        specifier: ^6.0.2
-        version: 6.0.2(typescript@5.9.3)(vite@7.3.0(@types/node@20.19.27)(yaml@2.8.1))
 
   benchmarks/client:
     dependencies:
@@ -48,8 +58,12 @@ importers:
         specifier: workspace:~
         version: link:../../packages/fusion
       vitest:
-        specifier: ^4.0.16
+        specifier: catalog:test
         version: 4.0.16(@types/node@20.19.27)(happy-dom@20.0.11)(yaml@2.8.1)
+    devDependencies:
+      vite-tsconfig-paths:
+        specifier: catalog:test
+        version: 6.0.3(typescript@5.9.3)(vite@7.3.0(@types/node@20.19.27)(yaml@2.8.1))
 
   benchmarks/server:
     dependencies:
@@ -57,16 +71,20 @@ importers:
         specifier: workspace:~
         version: link:../../packages/fusion-node
       vitest:
-        specifier: ^4.0.16
+        specifier: catalog:test
         version: 4.0.16(@types/node@20.19.27)(happy-dom@20.0.11)(yaml@2.8.1)
+    devDependencies:
+      vite-tsconfig-paths:
+        specifier: catalog:test
+        version: 6.0.3(typescript@5.9.3)(vite@7.3.0(@types/node@20.19.27)(yaml@2.8.1))
 
   packages/filerune: {}
 
   packages/fusion:
     dependencies:
       ts-vista:
-        specifier: ~0.2.2
-        version: 0.2.2
+        specifier: catalog:dep
+        version: 0.2.3
 
   packages/fusion-node:
     dependencies:
@@ -74,8 +92,12 @@ importers:
         specifier: workspace:~
         version: link:../fusion
       ts-vista:
-        specifier: ~0.2.2
-        version: 0.2.2
+        specifier: catalog:dep
+        version: 0.2.3
+    devDependencies:
+      '@types/node':
+        specifier: ^20.19.27
+        version: 20.19.27
 
   tests/fusion:
     dependencies:
@@ -83,11 +105,18 @@ importers:
         specifier: workspace:^
         version: link:../../packages/fusion
       fdir:
-        specifier: ^6.5.0
+        specifier: catalog:test
         version: 6.5.0(picomatch@4.0.3)
       vitest:
-        specifier: ^4.0.16
+        specifier: catalog:test
         version: 4.0.16(@types/node@20.19.27)(happy-dom@20.0.11)(yaml@2.8.1)
+    devDependencies:
+      happy-dom:
+        specifier: catalog:test
+        version: 20.0.11
+      vite-tsconfig-paths:
+        specifier: catalog:test
+        version: 6.0.3(typescript@5.9.3)(vite@7.3.0(@types/node@20.19.27)(yaml@2.8.1))
 
   tests/fusion-node:
     dependencies:
@@ -95,11 +124,15 @@ importers:
         specifier: workspace:^
         version: link:../../packages/fusion-node
       fdir:
-        specifier: ^6.5.0
+        specifier: catalog:test
         version: 6.5.0(picomatch@4.0.3)
       vitest:
-        specifier: ^4.0.16
+        specifier: catalog:test
         version: 4.0.16(@types/node@20.19.27)(happy-dom@20.0.11)(yaml@2.8.1)
+    devDependencies:
+      vite-tsconfig-paths:
+        specifier: catalog:test
+        version: 6.0.3(typescript@5.9.3)(vite@7.3.0(@types/node@20.19.27)(yaml@2.8.1))
 
 packages:
 
@@ -907,8 +940,8 @@ packages:
     resolution: {integrity: sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==}
     hasBin: true
 
-  ts-vista@0.2.2:
-    resolution: {integrity: sha512-QhuUrGs8WwGgHy1iUOfMztvLE0XB3EH4hFjw6rFGpStav5os7keIx9EHfJTBSpaPdlE3MmGBwVFAbTjDjROFuQ==}
+  ts-vista@0.2.3:
+    resolution: {integrity: sha512-aXdjXqE2ReXVauZTVDfA4Dl5StYID/kS9Z+uUBLJIhdU2oNQC/A33aMj9zeVJCd3fn0UtT8Wj+PAMCRASirkwg==}
 
   tsconfck@3.1.6:
     resolution: {integrity: sha512-ks6Vjr/jEw0P1gmOVwutM3B7fWxoWBL2KRDb1JfqGVawBmO5UsvmWOQFGHBPl5yxYz4eERr19E6L7NMv+Fej4w==}
@@ -985,8 +1018,8 @@ packages:
       synckit:
         optional: true
 
-  vite-tsconfig-paths@6.0.2:
-    resolution: {integrity: sha512-c06LOO8fWB5RuEPpEIHXU9t7Dt4DoiPIljnKws9UygIaQo6PoFKawTftz5/QVcO+6pOs/HHWycnq4UrZkWVYnQ==}
+  vite-tsconfig-paths@6.0.3:
+    resolution: {integrity: sha512-7bL7FPX/DSviaZGYUKowWF1AiDVWjMjxNbE8lyaVGDezkedWqfGhlnQ4BZXre0ZN5P4kAgIJfAlgFDVyjrCIyg==}
     peerDependencies:
       vite: '*'
     peerDependenciesMeta:
@@ -1712,7 +1745,7 @@ snapshots:
 
   tree-kill@1.2.2: {}
 
-  ts-vista@0.2.2: {}
+  ts-vista@0.2.3: {}
 
   tsconfck@3.1.6(typescript@5.9.3):
     optionalDependencies:
@@ -1776,7 +1809,7 @@ snapshots:
     dependencies:
       rolldown: 1.0.0-beta.55
 
-  vite-tsconfig-paths@6.0.2(typescript@5.9.3)(vite@7.3.0(@types/node@20.19.27)(yaml@2.8.1)):
+  vite-tsconfig-paths@6.0.3(typescript@5.9.3)(vite@7.3.0(@types/node@20.19.27)(yaml@2.8.1)):
     dependencies:
       debug: 4.4.3
       globrex: 0.1.2
