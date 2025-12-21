@@ -1,35 +1,21 @@
-import type { UserConfig } from "tsdown";
+import { defineConfig } from "@apst/tsdown";
+import { cjsPreset, dtsPreset, esmPreset } from "@apst/tsdown/presets";
 
-import { defineConfig } from "tsdown";
-
-const options: UserConfig = {
-    entry: {
-        index: "./src/index.ts",
-    },
-    dts: false,
-    outDir: "./dist",
-    clean: true,
-    platform: "node",
-    treeshake: true,
-    sourcemap: true,
-    minify: false,
-    shims: true,
-    unbundle: false,
-    inputOptions: {
-        experimental: {
-            attachDebugInfo: "none",
+export default defineConfig(
+    {
+        entry: {
+            index: "./src/index.ts",
         },
+        platform: "node",
+        unbundle: false,
     },
-};
-
-export default defineConfig([
-    {
-        ...options,
-        format: "esm",
-    },
-    {
-        ...options,
-        dts: true,
-        format: "cjs",
-    },
-]);
+    [
+        esmPreset(),
+        cjsPreset(),
+        dtsPreset({
+            presetOptions: {
+                performanceMode: true,
+            },
+        }),
+    ],
+);
