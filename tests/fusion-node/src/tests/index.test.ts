@@ -1,7 +1,7 @@
 import type { CheckResult, SplitResult } from "@filerune/fusion-node";
 
-import * as fs from "node:fs";
-import * as path from "node:path";
+import * as Fs from "node:fs";
+import * as Path from "node:path";
 
 import { check, merge, split } from "@filerune/fusion-node";
 import { describe, expect, it } from "vitest";
@@ -10,13 +10,18 @@ import { cacheRoot, chunkSize, inFiles, outRoot } from "#/configs";
 
 describe("tests for split, check and merge", (): void => {
     for (let i: number = 0; i < inFiles.length; i++) {
-        const inFile: string = inFiles[i] as string;
-        const file: string = inFile.split("/").pop() ?? "";
+        const inFile: string | undefined = inFiles[i];
+
+        if (!inFile) continue;
+
+        const parsed: Path.ParsedPath = Path.parse(inFile);
+
+        const file: string = parsed.base;
         const fileName: string = file.split(".")[0] as string;
         const fileExt: string = file.split(".").pop() ?? "";
 
-        const cacheDir: string = path.resolve(cacheRoot, fileName);
-        const outFile: string = path.resolve(
+        const cacheDir: string = Path.resolve(cacheRoot, fileName);
+        const outFile: string = Path.resolve(
             outRoot,
             `${fileName}-result.${fileExt}`,
         );
@@ -34,7 +39,7 @@ describe("tests for split, check and merge", (): void => {
             expect(true).toBe(typeof result.fileSize === "number");
             expect(true).toBe(typeof result.totalChunks === "number");
             result.fileSize > 0 &&
-                expect(fs.existsSync(path.resolve(cacheDir, `${0}`))).toBe(
+                expect(Fs.existsSync(Path.resolve(cacheDir, `${0}`))).toBe(
                     true,
                 );
 
@@ -80,7 +85,7 @@ describe("tests for split, check and merge", (): void => {
                 outFile: outFile,
             });
 
-            expect(fs.existsSync(outFile)).toBe(true);
+            expect(Fs.existsSync(outFile)).toBe(true);
         });
     }
 });
