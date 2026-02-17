@@ -1,12 +1,15 @@
 set shell := ["bash", "-cu"]
-set windows-shell := ["powershell"]
+set windows-shell := ["pwsh", "-Command"]
 
-node_bin := "./node_modules/.bin/"
-tsc := node_bin + "tsc"
-biome := node_bin + "biome"
-tsdown := node_bin + "tsdown"
-vitest := node_bin + "vitest"
-typedoc := node_bin + "typedoc"
+lsl_cfg := "-config ../../../.ls-lint.yaml"
+
+tsc := "pnpm exec tsc"
+biome := "pnpm exec biome"
+tsdown := "pnpm exec tsdown"
+vitest := "pnpm exec vitest"
+typedoc := "pnpm exec typedoc"
+
+publish := "pnpm publish"
 
 fusion := "./packages/fusion/"
 fusion_node := "./packages/fusion-node/"
@@ -28,25 +31,34 @@ _:
 i:
     pnpm install
 
+# Lint with ls-lint
+lslint:
+    cd ./{{fusion}}/src && ls-lint {{lsl_cfg}}
+    cd ./{{fusion_node}}/src && ls-lint {{lsl_cfg}}
+
 # Lint with TypeScript Compiler
 tsc:
-    cd ./{{fusion}} && ../../{{tsc}} --noEmit
-    cd ./{{fusion_node}} && ../../{{tsc}} --noEmit
+    cd ./{{fusion}} && {{tsc}} --noEmit
+    cd ./{{fusion_node}} && {{tsc}} --noEmit
 
 # Lint code
 lint:
-    ls-lint
+    just lslint
     typos
     just tsc
 
+# Lint code with Biome
+lint-biome:
+    {{biome}} lint .
+
 # Format code
 fmt:
-    ./{{biome}} check --write .
+    {{biome}} check --write .
 
 # Build packages
 build:
-    cd ./{{fusion}} && ../../{{tsdown}} -c tsdown.config.ts
-    cd ./{{fusion_node}} && ../../{{tsdown}} -c tsdown.config.ts
+    cd ./{{fusion}} && {{tsdown}} -c tsdown.config.ts
+    cd ./{{fusion_node}} && {{tsdown}} -c tsdown.config.ts
     rm ./{{fusion}}/dist/@types/base/split.js
     rm ./{{fusion}}/dist/@types/base/split.mjs
     rm ./{{fusion}}/dist/@types/base/check.js
@@ -56,25 +68,16 @@ build:
 
 # Run tests
 test:
-    cd ./{{test_fusion}} && ./{{vitest}} run
-    cd ./{{test_fusion_node}} && ./{{vitest}} run
-
-# Run tests with different runtimes
-test-all:
-    cd ./{{test_fusion}} && pnpm run test
-    cd ./{{test_fusion_node}} && pnpm run test
-    cd ./{{test_fusion}} && deno run test
-    cd ./{{test_fusion_node}} && deno run test
-    cd ./{{test_fusion}} && bun run test
-    cd ./{{test_fusion_node}} && bun run test
+    cd ./{{test_fusion}} && {{vitest}} run
+    cd ./{{test_fusion_node}} && {{vitest}} run
 
 # Run client side benchmark
 bench-client:
-    cd ./{{bench_client}} && ./{{vitest}} bench --run
+    cd ./{{bench_client}} && {{vitest}} bench --run
 
 # Run server side benchmark
 bench-server:
-    cd ./{{bench_server}} && ./{{vitest}} bench --run
+    cd ./{{bench_server}} && {{vitest}} bench --run
 
 # Run benchmarks
 bench:
@@ -83,16 +86,16 @@ bench:
 
 # Generate APIs documentation
 api:
-    cd ./{{fusion}} && ../../{{typedoc}}
-    cd ./{{fusion_node}} && ../../{{typedoc}}
+    cd ./{{fusion}} && {{typedoc}}
+    cd ./{{fusion_node}} && {{typedoc}}
 
 # Publish fusion package as dry-run
 publish-dry-fusion:
-    cd ./{{fusion}} && pnpm publish --no-git-checks --dry-run
+    cd ./{{fusion}} && {{publish}} --no-git-checks --dry-run
 
 # Publish fusion-node package as dry-run
 publish-dry-fusion-node:
-    cd ./{{fusion_node}} && pnpm publish --no-git-checks --dry-run
+    cd ./{{fusion_node}} && {{publish}} --no-git-checks --dry-run
 
 # Publish all packages as dry-run
 publish-try:
@@ -101,40 +104,36 @@ publish-try:
 
 # Publish fusion package
 publish-fusion:
-    cd ./{{fusion}} && pnpm publish
+    cd ./{{fusion}} && {{publish}}
 
 # Publish fusion-node package
 publish-fusion-node:
-    cd ./{{fusion_node}} && pnpm publish
+    cd ./{{fusion_node}} && {{publish}}
 
 # Publish all packages
 publish:
     just publish-fusion
     just publish-fusion-node
 
-# Clean builds
-clean:
-    rm -rf ./{{fusion}}/dist
-    rm -rf ./{{fusion_node}}/dist
-
 # Clean media
 clean-media:
     rm -rf ./{{bench_server}}/.media
     rm -rf ./{{test_fusion_node}}/.media
 
+# Clean builds
+clean:
+    rm -rf ./packages/*/dist
+
 # Clean everything
 clean-all:
-    rm -rf ./node_modules
-
-    rm -rf ./{{fusion}}/node_modules
-    rm -rf ./{{fusion_node}}/node_modules
-
-    rm -rf ./{{test_fusion}}/node_modules
-    rm -rf ./{{test_fusion_node}}/node_modules
-
-    rm -rf ./{{bench_client}}/node_modules
-    rm -rf ./{{bench_server}}/node_modules
-
     just clean-media
 
     just clean
+
+    rm -rf ./benchmarks/*/node_modules
+
+    rm -rf ./tests/*/node_modules
+
+    rm -rf ./packages/*/node_modules
+
+    rm -rf ./node_modules
