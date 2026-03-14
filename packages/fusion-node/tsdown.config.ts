@@ -7,7 +7,6 @@ export default defineConfig(
             index: "./src/index.ts",
         },
         platform: "node",
-        unbundle: false,
     },
     [
         esmPreset(),

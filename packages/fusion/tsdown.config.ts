@@ -13,6 +13,7 @@ export default defineConfig(
             "@types/base/merge": "./src/@types/base/merge.ts",
         },
         platform: "browser",
+        unbundle: true,
     },
     [
         esmPreset(),
