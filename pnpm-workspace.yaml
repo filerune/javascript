@@ -15,7 +15,12 @@ catalogs:
 minimumReleaseAge: 1440
 
 minimumReleaseAgeExclude:
+    # config
     - "@apst/biome"
     - "@apst/tsconfig"
     - "@apst/tsdown"
+    # tsdown
+    - "@tsdown/*"
+    - "tsdown"
+    # core
     - "ts-vista"
