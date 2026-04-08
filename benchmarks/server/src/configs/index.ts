@@ -23,4 +23,4 @@ const preSplit = async (): Promise<SplitResultNode> => {
     });
 };
 
-export { chunkSize, inFile, cacheDir, outFile, preSplit };
+export { cacheDir, chunkSize, inFile, outFile, preSplit };

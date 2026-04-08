@@ -20,4 +20,4 @@ const preSplit = async (): Promise<SplitResult> => {
     });
 };
 
-export { getFile, chunkSize, preSplit };
+export { chunkSize, getFile, preSplit };

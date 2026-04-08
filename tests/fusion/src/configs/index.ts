@@ -18,4 +18,4 @@ const inFiles: string[] = new fdir()
 
 const chunkSize: number = 1 * 1024 * 1024;
 
-export { inRoot, inFiles, chunkSize };
+export { chunkSize, inFiles, inRoot };

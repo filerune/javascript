@@ -90,10 +90,10 @@ type CheckOptions = Format<
 >;
 
 export type {
-    CheckBaseOptions,
     _CheckOptions,
+    CheckBaseOptions,
     CheckFunctionOptions,
     CheckOptions,
-    CheckResultError,
     CheckResult,
+    CheckResultError,
 };

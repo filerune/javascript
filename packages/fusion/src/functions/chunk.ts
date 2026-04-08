@@ -74,4 +74,4 @@ const sortFileChunks = (array: FileChunk[]): FileChunk[] => {
     );
 };
 
-export { isTypeOfFileChunks, isTypeOfFileChunk, sortFileChunks };
+export { isTypeOfFileChunk, isTypeOfFileChunks, sortFileChunks };

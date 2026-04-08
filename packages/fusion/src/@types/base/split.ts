@@ -54,8 +54,8 @@ type SplitOptions = Format<
 >;
 
 export type {
-    SplitBaseOptions,
     _SplitOptions,
+    SplitBaseOptions,
     SplitFunctionOptions,
     SplitOptions,
     SplitResult,
