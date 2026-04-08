@@ -22,21 +22,30 @@ bench_server := "./benchmarks/server/"
 
 # Default action
 _:
-    just lint
-    just fmt
-    just build
-    just test
+    just --list -u
 
 # Install
 i:
     pnpm install
 
-# Lint with ls-lint
-lslint:
+# Format code
+fmt:
+    {{biome}} check --write .
+
+# Lint code with ls-lint
+ls-lint:
     cd ./{{fusion}}/src && ls-lint {{lsl_cfg}}
     cd ./{{fusion_node}}/src && ls-lint {{lsl_cfg}}
 
-# Lint with TypeScript Compiler
+# Lint code with ls-lint
+lslint:
+    just ls-lint
+
+# Lint code with typos-cli
+typos:
+    typos
+
+# Lint code with TypeScript Compiler
 tsc:
     cd ./{{fusion}} && {{tsc}} --noEmit
     cd ./{{fusion_node}} && {{tsc}} --noEmit
@@ -44,16 +53,12 @@ tsc:
 # Lint code
 lint:
     just lslint
-    typos
+    just typos
     just tsc
 
 # Lint code with Biome
 lint-biome:
     {{biome}} lint .
-
-# Format code
-fmt:
-    {{biome}} check --write .
 
 # Build packages
 build:
@@ -70,6 +75,13 @@ build:
 test:
     cd ./{{test_fusion}} && {{vitest}} run
     cd ./{{test_fusion_node}} && {{vitest}} run
+
+# Check code
+check:
+    just build
+    just fmt
+    just lint
+    just test
 
 # Run client side benchmark
 bench-client:
