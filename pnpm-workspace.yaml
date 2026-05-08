@@ -3,6 +3,12 @@ packages:
     - ./tests/*
     - ./benchmarks/*
 
+autoInstallPeers: false
+strictPeerDependencies: false
+
+allowBuilds:
+    esbuild: false
+
 catalogs:
     dep:
         ts-vista: ~0.2.3
@@ -10,7 +16,7 @@ catalogs:
         fdir: ^6
         happy-dom: ^20
         vite-tsconfig-paths: ^6
-        vitest: ^4
+        vitest: ^4.1
 
 minimumReleaseAge: 1440
 
