@@ -14,8 +14,8 @@ catalogs:
       specifier: ^6
       version: 6.5.0
     happy-dom:
-      specifier: ^20
-      version: 20.0.11
+      specifier: ^20.9.0
+      version: 20.9.0
     vite-tsconfig-paths:
       specifier: ^6
       version: 6.1.1
@@ -59,7 +59,7 @@ importers:
         version: link:../../packages/fusion
       vitest:
         specifier: catalog:test
-        version: 4.1.5(@types/node@20.19.41)(happy-dom@20.0.11)(yaml@2.8.3)
+        version: 4.1.5(@types/node@20.19.41)(happy-dom@20.9.0)(yaml@2.8.3)
     devDependencies:
       vite-tsconfig-paths:
         specifier: catalog:test
@@ -72,7 +72,7 @@ importers:
         version: link:../../packages/fusion-node
       vitest:
         specifier: catalog:test
-        version: 4.1.5(@types/node@20.19.41)(happy-dom@20.0.11)(yaml@2.8.3)
+        version: 4.1.5(@types/node@20.19.41)(happy-dom@20.9.0)(yaml@2.8.3)
     devDependencies:
       vite-tsconfig-paths:
         specifier: catalog:test
@@ -109,11 +109,11 @@ importers:
         version: 6.5.0(picomatch@4.0.4)
       vitest:
         specifier: catalog:test
-        version: 4.1.5(@types/node@20.19.41)(happy-dom@20.0.11)(yaml@2.8.3)
+        version: 4.1.5(@types/node@20.19.41)(happy-dom@20.9.0)(yaml@2.8.3)
     devDependencies:
       happy-dom:
         specifier: catalog:test
-        version: 20.0.11
+        version: 20.9.0
       vite-tsconfig-paths:
         specifier: catalog:test
         version: 6.1.1(typescript@6.0.3)(vite@7.3.0(@types/node@20.19.41)(yaml@2.8.3))
@@ -128,7 +128,7 @@ importers:
         version: 6.5.0(picomatch@4.0.4)
       vitest:
         specifier: catalog:test
-        version: 4.1.5(@types/node@20.19.41)(happy-dom@20.0.11)(yaml@2.8.3)
+        version: 4.1.5(@types/node@20.19.41)(happy-dom@20.9.0)(yaml@2.8.3)
     devDependencies:
       vite-tsconfig-paths:
         specifier: catalog:test
@@ -695,6 +695,9 @@ packages:
   '@types/whatwg-mimetype@3.0.2':
     resolution: {integrity: sha512-c2AKvDT8ToxLIOUlN51gTiHXflsfIFisS4pO7pDPoKouJCESkhZnEy623gwP9laCy5lnLDAw1vAzu2vM2YLOrA==}
 
+  '@types/ws@8.18.1':
+    resolution: {integrity: sha512-ThVF6DCVhA8kUGy+aazFQ4kXQ7E1Ty7A3ypFOe0IcJV8O/M511G99AW24irKrW56Wt44yG9+ij8FaqoBGkuBXg==}
+
   '@vitest/expect@4.1.5':
     resolution: {integrity: sha512-PWBaRY5JoKuRnHlUHfpV/KohFylaDZTupcXN1H9vYryNLOnitSw60Mw9IAE2r67NbwwzBw/Cc/8q9BK3kIX8Kw==}
 
@@ -790,6 +793,10 @@ packages:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
     engines: {node: '>=0.12'}
 
+  entities@7.0.1:
+    resolution: {integrity: sha512-TWrgLOFUQTH994YUyl1yT4uyavY5nNB5muff+RtWaqNVCAK408b5ZnnbNAUEWLTCpum9w6arT70i1XdQ4UeOPA==}
+    engines: {node: '>=0.12'}
+
   es-module-lexer@2.1.0:
     resolution: {integrity: sha512-n27zTYMjYu1aj4MjCWzSP7G9r75utsaoc8m61weK+W8JMBGGQybd43GstCXZ3WNmSFtGT9wi59qQTW6mhTR5LQ==}
 
@@ -829,8 +836,8 @@ packages:
   globrex@0.1.2:
     resolution: {integrity: sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==}
 
-  happy-dom@20.0.11:
-    resolution: {integrity: sha512-QsCdAUHAmiDeKeaNojb1OHOPF7NjcWPBR7obdu3NwH2a/oyQaLg5d0aaCy/9My6CdPChYF07dvz5chaXBGaD4g==}
+  happy-dom@20.9.0:
+    resolution: {integrity: sha512-GZZ9mKe8r646NUAf/zemnGbjYh4Bt8/MqASJY+pSm5ZDtc3YQox+4gsLI7yi1hba6o+eCsGxpHn5+iEVn31/FQ==}
     engines: {node: '>=20.0.0'}
 
   hookable@6.1.1:
@@ -1140,6 +1147,18 @@ packages:
     resolution: {integrity: sha512-hUrmaWBdVDcxvYqnyh09zunKzROWjbZTiNy8dBEjkS7ehEDQibXJ7XvlmtbwuTclUiIyN+CyXQD4Vmko8fNm8w==}
     engines: {node: '>=8'}
     hasBin: true
+
+  ws@8.20.1:
+    resolution: {integrity: sha512-It4dO0K5v//JtTXuPkfEOaI3uUN87iYPnqo/ZzqCoG3g8uhA66QUMs/SrM0YK7/NAu+r4LMh/9dq2A7k+rHs+w==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: '>=5.0.2'
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
 
   yaml@2.8.3:
     resolution: {integrity: sha512-AvbaCLOO2Otw/lW5bmh9d/WEdcDFdQp2Z2ZUH3pX9U2ihyUY0nvLv7J6TrWowklRGPYbB/IuIMfYgxaCPg5Bpg==}
@@ -1515,6 +1534,10 @@ snapshots:
 
   '@types/whatwg-mimetype@3.0.2': {}
 
+  '@types/ws@8.18.1':
+    dependencies:
+      '@types/node': 20.19.41
+
   '@vitest/expect@4.1.5':
     dependencies:
       '@standard-schema/spec': 1.1.0
@@ -1594,6 +1617,8 @@ snapshots:
 
   entities@4.5.0: {}
 
+  entities@7.0.1: {}
+
   es-module-lexer@2.1.0: {}
 
   es-toolkit@1.46.1: {}
@@ -1646,11 +1671,17 @@ snapshots:
 
   globrex@0.1.2: {}
 
-  happy-dom@20.0.11:
+  happy-dom@20.9.0:
     dependencies:
       '@types/node': 20.19.41
       '@types/whatwg-mimetype': 3.0.2
+      '@types/ws': 8.18.1
+      entities: 7.0.1
       whatwg-mimetype: 3.0.0
+      ws: 8.20.1
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
 
   hookable@6.1.1: {}
 
@@ -1878,7 +1909,7 @@ snapshots:
       fsevents: 2.3.3
       yaml: 2.8.3
 
-  vitest@4.1.5(@types/node@20.19.41)(happy-dom@20.0.11)(yaml@2.8.3):
+  vitest@4.1.5(@types/node@20.19.41)(happy-dom@20.9.0)(yaml@2.8.3):
     dependencies:
       '@vitest/expect': 4.1.5
       '@vitest/mocker': 4.1.5(vite@7.3.0(@types/node@20.19.41)(yaml@2.8.3))
@@ -1902,7 +1933,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 20.19.41
-      happy-dom: 20.0.11
+      happy-dom: 20.9.0
     transitivePeerDependencies:
       - jiti
       - less
@@ -1922,5 +1953,7 @@ snapshots:
     dependencies:
       siginfo: 2.0.0
       stackback: 0.0.2
+
+  ws@8.20.1: {}
 
   yaml@2.8.3: {}
