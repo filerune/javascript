@@ -56,6 +56,6 @@
         "ts-vista": "catalog:dep"
     },
     "devDependencies": {
-        "@types/node": "^20.19.41"
+        "@types/node": "^20.19.42"
     }
 }
