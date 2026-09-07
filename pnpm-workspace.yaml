@@ -16,7 +16,7 @@ catalogs:
         fdir: ^6
         happy-dom: ^20
         vite-tsconfig-paths: ^6
-        vitest: ^4.1
+        vitest: ^5.0
 
 minimumReleaseAge: 1440
 
