@@ -11,6 +11,7 @@
         "vitest": "catalog:test"
     },
     "devDependencies": {
+        "vite": "catalog:test",
         "vite-tsconfig-paths": "catalog:test"
     }
 }

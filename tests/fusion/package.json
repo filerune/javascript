@@ -13,6 +13,7 @@
     },
     "devDependencies": {
         "happy-dom": "catalog:test",
+        "vite": "catalog:test",
         "vite-tsconfig-paths": "catalog:test"
     }
 }
