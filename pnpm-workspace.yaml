@@ -14,7 +14,7 @@ catalogs:
         ts-vista: ~0.2.3
     test:
         fdir: ^6
-        happy-dom: ^20
+        happy-dom: ^21
         vite-tsconfig-paths: ^6
         vitest: ^4.1
 
